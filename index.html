@@ -261,7 +261,10 @@
         <script>
             var menubtn = document.getElementById("menubtn");
             var sideNav = document.getElementById("sideNav");
-
+            document.addEventListener('contextmenu',
+            function (e){
+                e.preventDefault();
+            },false);
             sideNav.style.right = "-300px";
             menubtn.onclick = function(){
                 if(sideNav.style.right == "-300px"){
